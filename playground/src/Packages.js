@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const packages = [
   {
@@ -52,15 +52,29 @@ const packages = [
   },
 ];
 
-packages.map((data) => console.log(data));
-
 function Packages() {
+  const [number, setNumber] = useState(0);
+
+  function handlePrevious() {
+    number > 1 && setNumber(() => number - 1);
+    console.log(number);
+  }
+
+  function handleNext() {
+    setNumber(() => number + 1);
+    console.log(number);
+  }
+
   return (
     <div className="packages">
       <div>
-        <img className="packageImage" src="../packages/1.jpg" alt="glee" />
+        <img
+          className="packageImage"
+          src={`../packages/${number}.jpg`}
+          alt="glee"
+        />
       </div>
-      <div className="title"> GLEE PACKAGE </div>
+      <div className="title"> GLEE PACKAGE {number}</div>
       <div className="inclusions">
         <span>INCLUSIONS</span>
         <ul className="inclusionList">
@@ -84,10 +98,10 @@ function Packages() {
         </button>
       </div>
       <div className="navigator">
-        <button onClick={() => alert("PREVIOUS")} className="previous">
+        <button onClick={handlePrevious} className="previous">
           PREVIOUS
         </button>
-        <button onClick={() => alert("NEXT")} className="next">
+        <button onClick={handleNext} className="next">
           NEXT
         </button>
       </div>
