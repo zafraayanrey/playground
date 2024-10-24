@@ -89,7 +89,7 @@ DE8F5F */
   width: 100%;
   height: 50px;
   background-color: rgb(11, 58, 58);
-  border: solid 3px rgb(97, 214, 208);
+  border: none;
   padding: 10px;
   font-size: x-large;
   color: white;
@@ -100,7 +100,7 @@ DE8F5F */
   width: 100%;
   height: 50px;
   background-color: rgb(58, 173, 173);
-  border: solid 3px rgb(15, 134, 134);
+  border: none;
   padding: 10px;
   font-size: x-large;
   color: white;
@@ -115,5 +115,10 @@ DE8F5F */
 
 .previous,
 .next {
+  margin-top: 10px;
   height: 40px;
+  background-color: rgb(20, 131, 131);
+  color: white;
+  font-size: x-large;
+  border: none;
 }
