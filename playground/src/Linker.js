@@ -1,14 +1,12 @@
-// import { BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom";
-
-// import ReservationForm from "./ReservationForm";
-
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ReservationForm from "./ReservationForm";
 import Home from "./Home";
+import ReservationForm from "./ReservationForm";
+import Zaf from "./Zaf";
 
-function App() {
+function Linker() {
   return (
-    <div className="wrapper">
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default Linker;
