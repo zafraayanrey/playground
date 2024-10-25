@@ -47,11 +47,11 @@ function Packages() {
           </span>
         </div>
       </div>
-      <div>
-        <Buttons>
-          <NavLink to="/reservation">BOOK NOW!</NavLink>
-        </Buttons>
-      </div>
+      <Buttons>
+        <NavLink to="/reservation">
+          <div>BOOK NOW!</div>
+        </NavLink>
+      </Buttons>
     </div>
   );
 }
