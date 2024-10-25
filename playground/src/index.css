@@ -94,6 +94,12 @@ DE8F5F */
   padding: 10px;
   font-size: x-large;
   color: white;
+  place-content: center;
+}
+
+.bookNow a {
+  color: white;
+  text-decoration: none;
 }
 
 .bookNow:hover,
@@ -134,21 +140,32 @@ DE8F5F */
 }
 
 .inputContainer,
-.homeButton {
+.homeButton,
+.selectContainer {
   display: grid;
   padding: 10px;
   /* align-items: center; */
   /* text-align: center; */
   place-items: center;
+  gap: 5px;
   background-color: rgb(255, 255, 255);
   border: solid 1px rgb(152, 201, 201);
 }
 
 .reservationForm input {
   width: 100%;
-  height: 50px;
+  height: 35px;
   text-align: center;
-  font-size: larger;
+  font-size: large;
+  border: solid 1px rgb(106, 161, 161);
+  background-color: rgb(235, 250, 250);
+}
+
+.selectContainer select {
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  font-size: large;
   border: solid 1px rgb(106, 161, 161);
   background-color: rgb(235, 250, 250);
 }

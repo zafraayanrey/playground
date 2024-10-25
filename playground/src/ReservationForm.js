@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import Buttons from "./Buttons";
+import { MyContext } from "./MyContext";
 
 function ReservationForm() {
+  const packages = useContext(MyContext);
+  console.log(Date.now());
   return (
     <div className="reservationForm">
       <div className="homeButton">
@@ -16,6 +20,13 @@ function ReservationForm() {
         <input type="text" placeholder="FB Name"></input>
         <input type="text" placeholder="Celebrant's Name"></input>
       </div>
+      <div className="inputContainer date">
+        <input type="date"></input>
+      </div>
+      <div className="inputContainer time">
+        <input type="time"></input>
+      </div>
+
       <div className="inputContainer">
         <input type="text" placeholder="Party Venue"></input>
         <input type="text" placeholder="Barangay"></input>
@@ -26,8 +37,15 @@ function ReservationForm() {
       <div className="inputContainer">
         <input type="text" placeholder="Contact Number"></input>
       </div>
-      <div className="inputContainer">
-        <input type="text" placeholder="Chosen Package"></input>
+      <div className="selectContainer">
+        <select placeholder="Choose..">
+          {packages.map((item) => (
+            <option>{item.packageName}</option>
+          ))}
+        </select>
+      </div>
+      <div className="submitForm">
+        <Buttons>SUBMIT</Buttons>
       </div>
     </div>
   );
