@@ -169,3 +169,8 @@ DE8F5F */
   border: solid 1px rgb(106, 161, 161);
   background-color: rgb(235, 250, 250);
 }
+
+.error {
+  color: red;
+  font-size: smaller;
+}
