@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import ReservationForm from "./ReservationForm";
-import Zaf from "./Zaf";
 
 function Linker() {
   return (

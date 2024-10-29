@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ReservationForm from "./ReservationForm";
 import Home from "./Home";
 import { MyContext } from "./MyContext";
-import { useState } from "react";
+import Thankyou from "./Thankyou";
 
 const packages = [
   {
@@ -71,7 +71,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="reservation" element={<ReservationForm />} />
+            <Route path="/reservation" element={<ReservationForm />} />
+            <Route path="/thankyou" element={<Thankyou />} />
           </Routes>
         </BrowserRouter>
       </MyContext.Provider>
